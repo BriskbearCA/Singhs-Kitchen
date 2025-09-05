@@ -1,1 +1,1 @@
-# Singhs-Kitchen
+# Singh's Kitchen
