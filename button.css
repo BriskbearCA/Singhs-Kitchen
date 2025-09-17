@@ -1,3 +1,30 @@
+/* COLOR VARIABLES */
+:root {
+    --btn-order: #ff4d4d;
+    --btn-order-hover: #e63946;
+    --btn-order-shadow: 255, 77, 77;
+
+    --btn-call: #007bff;
+    --btn-call-hover: #0056b3;
+    --btn-call-shadow: 0, 123, 255;
+
+    --btn-whatsapp: #25d366;
+    --btn-whatsapp-hover: #1da851;
+    --btn-whatsapp-shadow: 37, 211, 102;
+
+    --btn-premium: #8b5cf6;
+    --btn-premium-hover: #7c3aed;
+    --btn-premium-shadow: 139, 92, 246;
+
+    --btn-dark: #1f2937;
+    --btn-dark-hover: #111827;
+    --btn-dark-shadow: 31, 41, 55;
+
+    --btn-gold: #f59e0b;
+    --btn-gold-hover: #d97706;
+    --btn-gold-shadow: 245, 158, 11;
+}
+
 /* BASE BUTTON STYLE - Common properties for all buttons */
 .animated-btn,
         button.animated-btn,
@@ -80,102 +107,102 @@
 .animated-btn.btn-order,
         button.animated-btn.btn-order,
         a.animated-btn.btn-order {
-    background-color: #ff4d4d !important;
-    background: #ff4d4d !important;
-    box-shadow: 0 2px 8px rgba(255, 77, 77, 0.3) !important;
+    background-color: var(--btn-order) !important;
+    background: var(--btn-order) !important;
+    box-shadow: 0 2px 8px rgba(var(--btn-order-shadow), 0.3) !important;
 }
 
 .animated-btn.btn-order:hover,
         button.animated-btn.btn-order:hover,
         a.animated-btn.btn-order:hover {
-    background-color: #e63946 !important;
-    background: #e63946 !important;
-    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4) !important;
+    background-color: var(--btn-order-hover) !important;
+    background: var(--btn-order-hover) !important;
+    box-shadow: 0 4px 15px rgba(var(--btn-order-shadow), 0.4) !important;
 }
 
         /* BLUE - Call/Phone Button */
 .animated-btn.btn-call,
         button.animated-btn.btn-call,
         a.animated-btn.btn-call {
-    background-color: #007bff !important;
-    background: #007bff !important;
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3) !important;
+    background-color: var(--btn-call) !important;
+    background: var(--btn-call) !important;
+    box-shadow: 0 2px 8px rgba(var(--btn-call-shadow), 0.3) !important;
 }
 
 .animated-btn.btn-call:hover,
         button.animated-btn.btn-call:hover,
         a.animated-btn.btn-call:hover {
-    background-color: #0056b3 !important;
-    background: #0056b3 !important;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4) !important;
+    background-color: var(--btn-call-hover) !important;
+    background: var(--btn-call-hover) !important;
+    box-shadow: 0 4px 15px rgba(var(--btn-call-shadow), 0.4) !important;
 }
 
         /* GREEN - WhatsApp/Success Button */
 .animated-btn.btn-whatsapp,
         button.animated-btn.btn-whatsapp,
         a.animated-btn.btn-whatsapp {
-    background-color: #25d366 !important;
-    background: #25d366 !important;
-    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3) !important;
+    background-color: var(--btn-whatsapp) !important;
+    background: var(--btn-whatsapp) !important;
+    box-shadow: 0 2px 8px rgba(var(--btn-whatsapp-shadow), 0.3) !important;
 }
 
 .animated-btn.btn-whatsapp:hover,
         button.animated-btn.btn-whatsapp:hover,
         a.animated-btn.btn-whatsapp:hover {
-    background-color: #1da851 !important;
-    background: #1da851 !important;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+    background-color: var(--btn-whatsapp-hover) !important;
+    background: var(--btn-whatsapp-hover) !important;
+    box-shadow: 0 4px 15px rgba(var(--btn-whatsapp-shadow), 0.4) !important;
 }
 
         /* PURPLE - Premium/Special Button */
 .animated-btn.btn-premium,
         button.animated-btn.btn-premium,
         a.animated-btn.btn-premium {
-    background-color: #8b5cf6 !important;
-    background: #8b5cf6 !important;
-    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3) !important;
+    background-color: var(--btn-premium) !important;
+    background: var(--btn-premium) !important;
+    box-shadow: 0 2px 8px rgba(var(--btn-premium-shadow), 0.3) !important;
 }
 
 .animated-btn.btn-premium:hover,
         button.animated-btn.btn-premium:hover,
         a.animated-btn.btn-premium:hover {
-    background-color: #7c3aed !important;
-    background: #7c3aed !important;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4) !important;
+    background-color: var(--btn-premium-hover) !important;
+    background: var(--btn-premium-hover) !important;
+    box-shadow: 0 4px 15px rgba(var(--btn-premium-shadow), 0.4) !important;
 }
 
         /* DARK/BLACK - Elegant Button */
 .animated-btn.btn-dark,
         button.animated-btn.btn-dark,
         a.animated-btn.btn-dark {
-    background-color: #1f2937 !important;
-    background: #1f2937 !important;
-    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.3) !important;
+    background-color: var(--btn-dark) !important;
+    background: var(--btn-dark) !important;
+    box-shadow: 0 2px 8px rgba(var(--btn-dark-shadow), 0.3) !important;
 }
 
 .animated-btn.btn-dark:hover,
         button.animated-btn.btn-dark:hover,
         a.animated-btn.btn-dark:hover {
-    background-color: #111827 !important;
-    background: #111827 !important;
-    box-shadow: 0 4px 15px rgba(31, 41, 55, 0.4) !important;
+    background-color: var(--btn-dark-hover) !important;
+    background: var(--btn-dark-hover) !important;
+    box-shadow: 0 4px 15px rgba(var(--btn-dark-shadow), 0.4) !important;
 }
 
         /* GOLD/YELLOW - VIP Button */
 .animated-btn.btn-gold,
         button.animated-btn.btn-gold,
         a.animated-btn.btn-gold {
-    background-color: #f59e0b !important;
-    background: #f59e0b !important;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3) !important;
+    background-color: var(--btn-gold) !important;
+    background: var(--btn-gold) !important;
+    box-shadow: 0 2px 8px rgba(var(--btn-gold-shadow), 0.3) !important;
 }
 
 .animated-btn.btn-gold:hover,
         button.animated-btn.btn-gold:hover,
         a.animated-btn.btn-gold:hover {
-    background-color: #d97706 !important;
-    background: #d97706 !important;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4) !important;
+    background-color: var(--btn-gold-hover) !important;
+    background: var(--btn-gold-hover) !important;
+    box-shadow: 0 4px 15px rgba(var(--btn-gold-shadow), 0.4) !important;
 }
 
         /* =========================
