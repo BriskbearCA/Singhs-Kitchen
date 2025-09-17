@@ -1,10 +1,8 @@
 /* COLOR VARIABLES */
 :root {
-    /* --btn-order: #ff4d4d;
-    --btn-order-hover: #e63946; */
-    --btn-order: #51e23e;
-    --btn-order-hover: #39e647;
-    --btn-order-shadow: #39e647;
+    --btn-order: #ff4d4d;
+    --btn-order-hover: #ff4d4d;
+    --btn-order-shadow: #ff4d4d;
 
     --btn-call: #007bff;
     --btn-call-hover: #0056b3;
