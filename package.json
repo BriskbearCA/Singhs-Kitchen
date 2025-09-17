@@ -1,0 +1,28 @@
+{
+  "name": "singhs-kitchen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss main.css -o main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BriskbearCA/Singhs-Kitchen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BriskbearCA/Singhs-Kitchen/issues"
+  },
+  "homepage": "https://github.com/BriskbearCA/Singhs-Kitchen#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  }
+}
