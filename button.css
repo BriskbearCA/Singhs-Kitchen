@@ -1,7 +1,9 @@
 /* COLOR VARIABLES */
 :root {
-    --btn-order: #ff4d4d;
-    --btn-order-hover: #e63946;
+    /* --btn-order: #ff4d4d;
+    --btn-order-hover: #e63946; */
+    --btn-order: #51e23e;
+    --btn-order-hover: #39e647;
     --btn-order-shadow: 255, 77, 77;
 
     --btn-call: #007bff;
