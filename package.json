@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss main.css -o main.css"
+    "build": "postcss main.css -o dist/main.css"
   },
   "repository": {
     "type": "git",
