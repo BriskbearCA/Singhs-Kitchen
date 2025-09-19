@@ -1,0 +1,63 @@
+/* CSS Variables for easy customization */
+:root {
+  --service-list-bg-color: #ffffff1a;
+  --service-list-text-color: #ffffff;
+  --service-list-border-radius: 100px;
+  --service-list-padding-vertical: 6px;
+  --service-list-padding-horizontal: 12px;
+  --service-list-font-weight: 500;
+  --service-list-margin-right: 6px;
+}
+
+/* Cross-browser compatible service list styles */
+.service-list-text {
+  /* Background with fallback */
+  background-color: rgba(255, 255, 255, 0.1); /* Fallback for older browsers */
+  background-color: var(--service-list-bg-color) !important;
+  
+  /* Text color */
+  color: var(--service-list-text-color) !important;
+  
+  /* Border radius with vendor prefixes for older browsers */
+  -webkit-border-radius: var(--service-list-border-radius) !important;
+  -moz-border-radius: var(--service-list-border-radius) !important;
+  border-radius: var(--service-list-border-radius) !important;
+  
+  /* Padding */
+  padding: var(--service-list-padding-vertical) var(--service-list-padding-horizontal) !important;
+  
+  /* Font weight */
+  font-weight: var(--service-list-font-weight) !important;
+  
+  /* Margin */
+  margin-right: var(--service-list-margin-right) !important;
+  
+  /* Additional cross-browser enhancements */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  /* Smooth transitions for better UX */
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  
+  /* Text rendering optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fallback for browsers that don't support CSS variables */
+@supports not (color: var(--service-list-text-color)) {
+  .service-list-text {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 100px !important;
+    padding: 6px 12px !important;
+    font-weight: 500 !important;
+    margin-right: 6px !important;
+  }
+}

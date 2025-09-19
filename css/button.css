@@ -1,368 +1,524 @@
-/* COLOR VARIABLES */
-:root {
-    --btn-order: #ff4d4d;
-    --btn-order-hover: #ff4d4d;
-    --btn-order-shadow: #ff4d4d;
+        /* COLOR VARIABLES - Updated with new color palette */
+        :root {
+            --btn-red: #E3472B;
+            --btn-red-hover: #c73a25;
 
-    --btn-call: #007bff;
-    --btn-call-hover: #0056b3;
-    --btn-call-shadow: 0, 123, 255;
+            --btn-yellow: #FEDC6E;
+            --btn-yellow-hover: #fed95a;
 
-    --btn-whatsapp: #25d366;
-    --btn-whatsapp-hover: #1da851;
-    --btn-whatsapp-shadow: 37, 211, 102;
+            --btn-lime: #A5FE6E;
+            --btn-lime-hover: #95e85e;
 
-    --btn-premium: #8b5cf6;
-    --btn-premium-hover: #7c3aed;
-    --btn-premium-shadow: 139, 92, 246;
+            --btn-green: #079455;
+            --btn-green-hover: #067d4a;
 
-    --btn-dark: #1f2937;
-    --btn-dark-hover: #111827;
-    --btn-dark-shadow: 31, 41, 55;
+            --btn-gray: #202020;
+            --btn-gray-hover: #1a1a1a;
 
-    --btn-gold: #f59e0b;
-    --btn-gold-hover: #d97706;
-    --btn-gold-shadow: 245, 158, 11;
-}
+            --btn-azure: #4285F4;
+            --btn-azure-hover: #357ae8;
 
-/* BASE BUTTON STYLE - Common properties for all buttons */
-.animated-btn,
+            --btn-skyblue: #3DC5FF;
+            --btn-skyblue-hover: #2bb8f5;
+
+            --btn-violet: #39244B;
+            --btn-violet-hover: #2d1c3a;
+
+            --btn-darkblue: #363C63;
+            --btn-darkblue-hover: #2a2f4f;
+
+            --btn-spacecadet: #24274B;
+            --btn-spacecadet-hover: #1c1f3a;
+
+            --btn-royalblue: #001C4B;
+            --btn-royalblue-hover: #001539;
+
+            --btn-prussianblue: #132B4A;
+            --btn-prussianblue-hover: #0f2239;
+
+            --btn-oxblood: #500001;
+            --btn-oxblood-hover: #400001;
+
+            --btn-brown: #573718;
+            --btn-brown-hover: #462c13;
+
+            --btn-myrtlegreen: #2B4B24;
+            --btn-myrtlegreen-hover: #22391d;
+
+            --btn-armygreen: #314200;
+            --btn-armygreen-hover: #253300;
+
+            --icon-table: url("svg/table2.svg");
+        }
+
+        /* Cross-browser compatibility reset */
+        .animated-btn,
+        .animated-btn *,
+        .animated-btn::before,
+        .animated-btn::after {
+            -webkit-box-sizing: border-box !important;
+            -moz-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+        }
+
+        /* BASE BUTTON STYLE - Cross-browser optimized */
+        .animated-btn,
         button.animated-btn,
         a.animated-btn {
             /* Reset all GHL defaults */
-    all: unset !important;
+            all: unset !important;
             /* Base styles */
-    position: relative !important;
-    display: inline-block !important;
-    padding: 14px 28px 14px 56px !important;
-    color: white !important;
-    text-decoration: none !important;
-    border-radius: 50px !important;
-    font-family: "Geist", sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    text-transform: none !important;
-    letter-spacing: 0.5px !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    overflow: hidden !important;
-    border: none !important;
-    cursor: pointer !important;
-    box-sizing: border-box !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-    margin: 0 !important;
-    outline: none !important;
-}
+            position: relative !important;
+            display: inline-block !important;
+            padding: 14px 28px 14px 56px !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 50px !important;
+            font-family: var(--contentfont) !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            text-transform: none !important;
+            letter-spacing: 0.5px !important;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            overflow: hidden !important;
+            border: none !important;
+            cursor: pointer !important;
+            box-sizing: border-box !important;
+            line-height: 1.2 !important;
+            text-align: center !important;
+            margin: 0 !important;
+            outline: none !important;
+            
+            /* Cross-browser compatibility */
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+            -webkit-touch-callout: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
 
         /* White circle background for all buttons */
-.animated-btn::before,
+        .animated-btn::before,
         button.animated-btn::before,
         a.animated-btn::before {
-    content: '' !important;
-    position: absolute !important;
-    width: 36px !important;
-    height: 36px !important;
-    background: white !important;
-    background-color: white !important;
-    border-radius: 50% !important;
-    left: 10px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 1 !important;
-    border: none !important;
-    display: block !important;
-}
+            content: '' !important;
+            position: absolute !important;
+            width: 36px !important;
+            height: 36px !important;
+            background: white !important;
+            background-color: white !important;
+            border-radius: 50% !important;
+            left: 10px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            z-index: 1 !important;
+            border: none !important;
+            display: block !important;
+        }
 
-        /* Base hover animation for white circle */
-.animated-btn:hover::before,
+        /* Universal icon for all buttons using svg/table2.svg */
+        .animated-btn::after,
+        button.animated-btn::after,
+        a.animated-btn::after {
+            content: '' !important;
+            position: absolute !important;
+            width: 18px !important;
+            height: 18px !important;
+            background-image: url("svg/table2.svg") !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            left: 19px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            z-index: 2 !important;
+            border: none !important;
+            display: block !important;
+        }
+
+        /* Base hover animation for white circle - Cross-browser */
+        .animated-btn:hover::before,
         button.animated-btn:hover::before,
         a.animated-btn:hover::before {
-    left: calc(100% - 46px) !important;
-    transform: translateY(-50%) scale(1.02) !important;
-}
+            left: calc(100% - 46px) !important;
+            transform: translateY(-50%) scale(1.02) !important;
+            -webkit-transform: translateY(-50%) scale(1.02) !important;
+            -moz-transform: translateY(-50%) scale(1.02) !important;
+            -ms-transform: translateY(-50%) scale(1.02) !important;
+        }
 
-        /* Base hover padding change */
-.animated-btn:hover,
+        /* Base hover animation for icon - Cross-browser */
+        .animated-btn:hover::after,
+        button.animated-btn:hover::after,
+        a.animated-btn:hover::after {
+            left: calc(100% - 37px) !important;
+        }
+
+        /* Base hover padding change - Cross-browser */
+        .animated-btn:hover,
         button.animated-btn:hover,
         a.animated-btn:hover {
-    transform: translateY(-1px) !important;
-    padding: 14px 56px 14px 28px !important;
-    color: white !important;
-    text-decoration: none !important;
-}
+            padding: 14px 56px 14px 28px !important;
+            color: white !important;
+            text-decoration: none !important;
+        }
 
-        /* Active state */
-.animated-btn:active,
+        /* Active state - Cross-browser */
+        .animated-btn:active,
         button.animated-btn:active,
         a.animated-btn:active {
-    transform: translateY(0) !important;
-}
+            transform: translateY(0) !important;
+            -webkit-transform: translateY(0) !important;
+            -moz-transform: translateY(0) !important;
+            -ms-transform: translateY(0) !important;
+        }
 
         /* =========================
            COLOR VARIATIONS 
         ========================= */
 
-        /* RED/ORANGE - Order Button */
-.animated-btn.btn-order,
-        button.animated-btn.btn-order,
-        a.animated-btn.btn-order {
-    background-color: var(--btn-order) !important;
-    background: var(--btn-order) !important;
-    box-shadow: 0 2px 8px rgba(var(--btn-order-shadow), 0.3) !important;
-}
+        /* RED BUTTON */
+        .animated-btn.btn-red,
+        button.animated-btn.btn-red,
+        a.animated-btn.btn-red {
+            background-color: var(--btn-red) !important;
+            background: var(--btn-red) !important;
+        }
+        .animated-btn.btn-red::after,
+        button.animated-btn.btn-red::after,
+        a.animated-btn.btn-red::after {
+            filter: brightness(0) saturate(100%) invert(32%) sepia(67%) saturate(3247%) hue-rotate(350deg) brightness(96%) contrast(88%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(67%) saturate(3247%) hue-rotate(350deg) brightness(96%) contrast(88%) !important;
+        }
+        .animated-btn.btn-red:hover,
+        button.animated-btn.btn-red:hover,
+        a.animated-btn.btn-red:hover {
+            background-color: var(--btn-red-hover) !important;
+            background: var(--btn-red-hover) !important;
+        }
 
-.animated-btn.btn-order:hover,
-        button.animated-btn.btn-order:hover,
-        a.animated-btn.btn-order:hover {
-    background-color: var(--btn-order-hover) !important;
-    background: var(--btn-order-hover) !important;
-    box-shadow: 0 4px 15px rgba(var(--btn-order-shadow), 0.4) !important;
-}
+        /* YELLOW BUTTON */
+        .animated-btn.btn-yellow,
+        button.animated-btn.btn-yellow,
+        a.animated-btn.btn-yellow {
+            background-color: var(--btn-yellow) !important;
+            background: var(--btn-yellow) !important;
+            color: #202020 !important;
+        }
+        .animated-btn.btn-yellow::after,
+        button.animated-btn.btn-yellow::after,
+        a.animated-btn.btn-yellow::after {
+            filter: brightness(0) saturate(100%) invert(88%) sepia(77%) saturate(504%) hue-rotate(347deg) brightness(104%) contrast(97%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(88%) sepia(77%) saturate(504%) hue-rotate(347deg) brightness(104%) contrast(97%) !important;
+        }
+        .animated-btn.btn-yellow:hover,
+        button.animated-btn.btn-yellow:hover,
+        a.animated-btn.btn-yellow:hover {
+            background-color: var(--btn-yellow-hover) !important;
+            background: var(--btn-yellow-hover) !important;
+            color: #202020 !important;
+        }
 
-        /* BLUE - Call/Phone Button */
-.animated-btn.btn-call,
-        button.animated-btn.btn-call,
-        a.animated-btn.btn-call {
-    background-color: var(--btn-call) !important;
-    background: var(--btn-call) !important;
-    box-shadow: 0 2px 8px rgba(var(--btn-call-shadow), 0.3) !important;
-}
+        /* LIME BUTTON */
+        .animated-btn.btn-lime,
+        button.animated-btn.btn-lime,
+        a.animated-btn.btn-lime {
+            background-color: var(--btn-lime) !important;
+            background: var(--btn-lime) !important;
+            color: #202020 !important;
+        }
+        .animated-btn.btn-lime::after,
+        button.animated-btn.btn-lime::after,
+        a.animated-btn.btn-lime::after {
+            filter: brightness(0) saturate(100%) invert(89%) sepia(99%) saturate(361%) hue-rotate(42deg) brightness(117%) contrast(90%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(99%) saturate(361%) hue-rotate(42deg) brightness(117%) contrast(90%) !important;
+        }
+        .animated-btn.btn-lime:hover,
+        button.animated-btn.btn-lime:hover,
+        a.animated-btn.btn-lime:hover {
+            background-color: var(--btn-lime-hover) !important;
+            background: var(--btn-lime-hover) !important;
+            color: #202020 !important;
+        }
 
-.animated-btn.btn-call:hover,
-        button.animated-btn.btn-call:hover,
-        a.animated-btn.btn-call:hover {
-    background-color: var(--btn-call-hover) !important;
-    background: var(--btn-call-hover) !important;
-    box-shadow: 0 4px 15px rgba(var(--btn-call-shadow), 0.4) !important;
-}
+        /* GREEN BUTTON */
+        .animated-btn.btn-green,
+        button.animated-btn.btn-green,
+        a.animated-btn.btn-green {
+            background-color: var(--btn-green) !important;
+            background: var(--btn-green) !important;
+        }
+        .animated-btn.btn-green::after,
+        button.animated-btn.btn-green::after,
+        a.animated-btn.btn-green::after {
+            filter: brightness(0) saturate(100%) invert(47%) sepia(99%) saturate(1174%) hue-rotate(126deg) brightness(91%) contrast(94%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(47%) sepia(99%) saturate(1174%) hue-rotate(126deg) brightness(91%) contrast(94%) !important;
+        }
+        .animated-btn.btn-green:hover,
+        button.animated-btn.btn-green:hover,
+        a.animated-btn.btn-green:hover {
+            background-color: var(--btn-green-hover) !important;
+            background: var(--btn-green-hover) !important;
+        }
 
-        /* GREEN - WhatsApp/Success Button */
-.animated-btn.btn-whatsapp,
-        button.animated-btn.btn-whatsapp,
-        a.animated-btn.btn-whatsapp {
-    background-color: var(--btn-whatsapp) !important;
-    background: var(--btn-whatsapp) !important;
-    box-shadow: 0 2px 8px rgba(var(--btn-whatsapp-shadow), 0.3) !important;
-}
+        /* GRAY BUTTON */
+        .animated-btn.btn-gray,
+        button.animated-btn.btn-gray,
+        a.animated-btn.btn-gray {
+            background-color: var(--btn-gray) !important;
+            background: var(--btn-gray) !important;
+        }
+        .animated-btn.btn-gray::after,
+        button.animated-btn.btn-gray::after,
+        a.animated-btn.btn-gray::after {
+            filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(202deg) brightness(97%) contrast(95%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(202deg) brightness(97%) contrast(95%) !important;
+        }
+        .animated-btn.btn-gray:hover,
+        button.animated-btn.btn-gray:hover,
+        a.animated-btn.btn-gray:hover {
+            background-color: var(--btn-gray-hover) !important;
+            background: var(--btn-gray-hover) !important;
+        }
 
-.animated-btn.btn-whatsapp:hover,
-        button.animated-btn.btn-whatsapp:hover,
-        a.animated-btn.btn-whatsapp:hover {
-    background-color: var(--btn-whatsapp-hover) !important;
-    background: var(--btn-whatsapp-hover) !important;
-    box-shadow: 0 4px 15px rgba(var(--btn-whatsapp-shadow), 0.4) !important;
-}
+        /* AZURE BUTTON */
+        .animated-btn.btn-azure,
+        button.animated-btn.btn-azure,
+        a.animated-btn.btn-azure {
+            background-color: var(--btn-azure) !important;
+            background: var(--btn-azure) !important;
+        }
+        .animated-btn.btn-azure::after,
+        button.animated-btn.btn-azure::after,
+        a.animated-btn.btn-azure::after {
+            filter: brightness(0) saturate(100%) invert(48%) sepia(100%) saturate(1272%) hue-rotate(207deg) brightness(97%) contrast(97%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(48%) sepia(100%) saturate(1272%) hue-rotate(207deg) brightness(97%) contrast(97%) !important;
+        }
+        .animated-btn.btn-azure:hover,
+        button.animated-btn.btn-azure:hover,
+        a.animated-btn.btn-azure:hover {
+            background-color: var(--btn-azure-hover) !important;
+            background: var(--btn-azure-hover) !important;
+        }
 
-        /* PURPLE - Premium/Special Button */
-.animated-btn.btn-premium,
-        button.animated-btn.btn-premium,
-        a.animated-btn.btn-premium {
-    background-color: var(--btn-premium) !important;
-    background: var(--btn-premium) !important;
-    box-shadow: 0 2px 8px rgba(var(--btn-premium-shadow), 0.3) !important;
-}
+        /* SKY BLUE BUTTON */
+        .animated-btn.btn-skyblue,
+        button.animated-btn.btn-skyblue,
+        a.animated-btn.btn-skyblue {
+            background-color: var(--btn-skyblue) !important;
+            background: var(--btn-skyblue) !important;
+        }
+        .animated-btn.btn-skyblue::after,
+        button.animated-btn.btn-skyblue::after,
+        a.animated-btn.btn-skyblue::after {
+            filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(407%) hue-rotate(168deg) brightness(106%) contrast(101%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(407%) hue-rotate(168deg) brightness(106%) contrast(101%) !important;
+        }
+        .animated-btn.btn-skyblue:hover,
+        button.animated-btn.btn-skyblue:hover,
+        a.animated-btn.btn-skyblue:hover {
+            background-color: var(--btn-skyblue-hover) !important;
+            background: var(--btn-skyblue-hover) !important;
+        }
 
-.animated-btn.btn-premium:hover,
-        button.animated-btn.btn-premium:hover,
-        a.animated-btn.btn-premium:hover {
-    background-color: var(--btn-premium-hover) !important;
-    background: var(--btn-premium-hover) !important;
-    box-shadow: 0 4px 15px rgba(var(--btn-premium-shadow), 0.4) !important;
-}
+        /* VIOLET BUTTON */
+        .animated-btn.btn-violet,
+        button.animated-btn.btn-violet,
+        a.animated-btn.btn-violet {
+            background-color: var(--btn-violet) !important;
+            background: var(--btn-violet) !important;
+        }
+        .animated-btn.btn-violet::after,
+        button.animated-btn.btn-violet::after,
+        a.animated-btn.btn-violet::after {
+            filter: brightness(0) saturate(100%) invert(17%) sepia(43%) saturate(1032%) hue-rotate(229deg) brightness(92%) contrast(96%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(17%) sepia(43%) saturate(1032%) hue-rotate(229deg) brightness(92%) contrast(96%) !important;
+        }
+        .animated-btn.btn-violet:hover,
+        button.animated-btn.btn-violet:hover,
+        a.animated-btn.btn-violet:hover {
+            background-color: var(--btn-violet-hover) !important;
+            background: var(--btn-violet-hover) !important;
+        }
 
-        /* DARK/BLACK - Elegant Button */
-.animated-btn.btn-dark,
-        button.animated-btn.btn-dark,
-        a.animated-btn.btn-dark {
-    background-color: var(--btn-dark) !important;
-    background: var(--btn-dark) !important;
-    box-shadow: 0 2px 8px rgba(var(--btn-dark-shadow), 0.3) !important;
-}
+        /* DARK BLUE BUTTON */
+        .animated-btn.btn-darkblue,
+        button.animated-btn.btn-darkblue,
+        a.animated-btn.btn-darkblue {
+            background-color: var(--btn-darkblue) !important;
+            background: var(--btn-darkblue) !important;
+        }
+        .animated-btn.btn-darkblue::after,
+        button.animated-btn.btn-darkblue::after,
+        a.animated-btn.btn-darkblue::after {
+            filter: brightness(0) saturate(100%) invert(24%) sepia(18%) saturate(1259%) hue-rotate(198deg) brightness(93%) contrast(88%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(24%) sepia(18%) saturate(1259%) hue-rotate(198deg) brightness(93%) contrast(88%) !important;
+        }
+        .animated-btn.btn-darkblue:hover,
+        button.animated-btn.btn-darkblue:hover,
+        a.animated-btn.btn-darkblue:hover {
+            background-color: var(--btn-darkblue-hover) !important;
+            background: var(--btn-darkblue-hover) !important;
+        }
 
-.animated-btn.btn-dark:hover,
-        button.animated-btn.btn-dark:hover,
-        a.animated-btn.btn-dark:hover {
-    background-color: var(--btn-dark-hover) !important;
-    background: var(--btn-dark-hover) !important;
-    box-shadow: 0 4px 15px rgba(var(--btn-dark-shadow), 0.4) !important;
-}
+        /* SPACE CADET BUTTON */
+        .animated-btn.btn-spacecadet,
+        button.animated-btn.btn-spacecadet,
+        a.animated-btn.btn-spacecadet {
+            background-color: var(--btn-spacecadet) !important;
+            background: var(--btn-spacecadet) !important;
+        }
+        .animated-btn.btn-spacecadet::after,
+        button.animated-btn.btn-spacecadet::after,
+        a.animated-btn.btn-spacecadet::after {
+            filter: brightness(0) saturate(100%) invert(16%) sepia(30%) saturate(1434%) hue-rotate(198deg) brightness(92%) contrast(93%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(16%) sepia(30%) saturate(1434%) hue-rotate(198deg) brightness(92%) contrast(93%) !important;
+        }
+        .animated-btn.btn-spacecadet:hover,
+        button.animated-btn.btn-spacecadet:hover,
+        a.animated-btn.btn-spacecadet:hover {
+            background-color: var(--btn-spacecadet-hover) !important;
+            background: var(--btn-spacecadet-hover) !important;
+        }
 
-        /* GOLD/YELLOW - VIP Button */
-.animated-btn.btn-gold,
-        button.animated-btn.btn-gold,
-        a.animated-btn.btn-gold {
-    background-color: var(--btn-gold) !important;
-    background: var(--btn-gold) !important;
-    box-shadow: 0 2px 8px rgba(var(--btn-gold-shadow), 0.3) !important;
-}
+        /* ROYAL BLUE BUTTON */
+        .animated-btn.btn-royalblue,
+        button.animated-btn.btn-royalblue,
+        a.animated-btn.btn-royalblue {
+            background-color: var(--btn-royalblue) !important;
+            background: var(--btn-royalblue) !important;
+        }
+        .animated-btn.btn-royalblue::after,
+        button.animated-btn.btn-royalblue::after,
+        a.animated-btn.btn-royalblue::after {
+            filter: brightness(0) saturate(100%) invert(4%) sepia(100%) saturate(4718%) hue-rotate(201deg) brightness(100%) contrast(101%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(4%) sepia(100%) saturate(4718%) hue-rotate(201deg) brightness(100%) contrast(101%) !important;
+        }
+        .animated-btn.btn-royalblue:hover,
+        button.animated-btn.btn-royalblue:hover,
+        a.animated-btn.btn-royalblue:hover {
+            background-color: var(--btn-royalblue-hover) !important;
+            background: var(--btn-royalblue-hover) !important;
+        }
 
-.animated-btn.btn-gold:hover,
-        button.animated-btn.btn-gold:hover,
-        a.animated-btn.btn-gold:hover {
-    background-color: var(--btn-gold-hover) !important;
-    background: var(--btn-gold-hover) !important;
-    box-shadow: 0 4px 15px rgba(var(--btn-gold-shadow), 0.4) !important;
-}
+        /* PRUSSIAN BLUE BUTTON */
+        .animated-btn.btn-prussianblue,
+        button.animated-btn.btn-prussianblue,
+        a.animated-btn.btn-prussianblue {
+            background-color: var(--btn-prussianblue) !important;
+            background: var(--btn-prussianblue) !important;
+        }
+        .animated-btn.btn-prussianblue::after,
+        button.animated-btn.btn-prussianblue::after,
+        a.animated-btn.btn-prussianblue::after {
+            filter: brightness(0) saturate(100%) invert(13%) sepia(54%) saturate(2067%) hue-rotate(194deg) brightness(94%) contrast(93%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(13%) sepia(54%) saturate(2067%) hue-rotate(194deg) brightness(94%) contrast(93%) !important;
+        }
+        .animated-btn.btn-prussianblue:hover,
+        button.animated-btn.btn-prussianblue:hover,
+        a.animated-btn.btn-prussianblue:hover {
+            background-color: var(--btn-prussianblue-hover) !important;
+            background: var(--btn-prussianblue-hover) !important;
+        }
 
-        /* =========================
-           ICON VARIATIONS (Icons match button colors)
-        ========================= */
+        /* OXBLOOD BUTTON */
+        .animated-btn.btn-oxblood,
+        button.animated-btn.btn-oxblood,
+        a.animated-btn.btn-oxblood {
+            background-color: var(--btn-oxblood) !important;
+            background: var(--btn-oxblood) !important;
+        }
+        .animated-btn.btn-oxblood::after,
+        button.animated-btn.btn-oxblood::after,
+        a.animated-btn.btn-oxblood::after {
+            filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7482%) hue-rotate(4deg) brightness(91%) contrast(114%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7482%) hue-rotate(4deg) brightness(91%) contrast(114%) !important;
+        }
+        .animated-btn.btn-oxblood:hover,
+        button.animated-btn.btn-oxblood:hover,
+        a.animated-btn.btn-oxblood:hover {
+            background-color: var(--btn-oxblood-hover) !important;
+            background: var(--btn-oxblood-hover) !important;
+        }
 
-        /* Shopping Bag Icon - RED */
-.animated-btn.icon-bag::after,
-        button.animated-btn.icon-bag::after,
-        a.animated-btn.icon-bag::after {
-    content: '' !important;
-    position: absolute !important;
-    width: 18px !important;
-    height: 18px !important;
-    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff4d4d' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z'/%3E%3Cline x1='3' y1='6' x2='21' y2='6'/%3E%3Cpath d='m16 10a4 4 0 0 1-8 0'/%3E%3C/svg%3E") !important; */
-    background-image: url(svg/table2.svg) !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    left: 19px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 2 !important;
-    border: none !important;
-    display: block !important;
-}
+        /* BROWN BUTTON */
+        .animated-btn.btn-brown,
+        button.animated-btn.btn-brown,
+        a.animated-btn.btn-brown {
+            background-color: var(--btn-brown) !important;
+            background: var(--btn-brown) !important;
+        }
+        .animated-btn.btn-brown::after,
+        button.animated-btn.btn-brown::after,
+        a.animated-btn.btn-brown::after {
+            filter: brightness(0) saturate(100%) invert(23%) sepia(23%) saturate(2359%) hue-rotate(18deg) brightness(94%) contrast(92%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(23%) sepia(23%) saturate(2359%) hue-rotate(18deg) brightness(94%) contrast(92%) !important;
+        }
+        .animated-btn.btn-brown:hover,
+        button.animated-btn.btn-brown:hover,
+        a.animated-btn.btn-brown:hover {
+            background-color: var(--btn-brown-hover) !important;
+            background: var(--btn-brown-hover) !important;
+        }
 
-.animated-btn.icon-bag:hover::after,
-        button.animated-btn.icon-bag:hover::after,
-        a.animated-btn.icon-bag:hover::after {
-    left: calc(100% - 37px) !important;
-}
+        /* MYRTLE GREEN BUTTON */
+        .animated-btn.btn-myrtlegreen,
+        button.animated-btn.btn-myrtlegreen,
+        a.animated-btn.btn-myrtlegreen {
+            background-color: var(--btn-myrtlegreen) !important;
+            background: var(--btn-myrtlegreen) !important;
+        }
+        .animated-btn.btn-myrtlegreen::after,
+        button.animated-btn.btn-myrtlegreen::after,
+        a.animated-btn.btn-myrtlegreen::after {
+            filter: brightness(0) saturate(100%) invert(25%) sepia(17%) saturate(1838%) hue-rotate(85deg) brightness(95%) contrast(87%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(25%) sepia(17%) saturate(1838%) hue-rotate(85deg) brightness(95%) contrast(87%) !important;
+        }
+        .animated-btn.btn-myrtlegreen:hover,
+        button.animated-btn.btn-myrtlegreen:hover,
+        a.animated-btn.btn-myrtlegreen:hover {
+            background-color: var(--btn-myrtlegreen-hover) !important;
+            background: var(--btn-myrtlegreen-hover) !important;
+        }
 
-        /* Phone Icon - BLUE */
-.animated-btn.icon-phone::after,
-        button.animated-btn.icon-phone::after,
-        a.animated-btn.icon-phone::after {
-    content: '' !important;
-    position: absolute !important;
-    width: 18px !important;
-    height: 18px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23007bff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    left: 19px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 2 !important;
-    display: block !important;
-}
+        /* ARMY GREEN BUTTON */
+        .animated-btn.btn-armygreen,
+        button.animated-btn.btn-armygreen,
+        a.animated-btn.btn-armygreen {
+            background-color: var(--btn-armygreen) !important;
+            background: var(--btn-armygreen) !important;
+        }
+        .animated-btn.btn-armygreen::after,
+        button.animated-btn.btn-armygreen::after,
+        a.animated-btn.btn-armygreen::after {
+            filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(1826%) hue-rotate(54deg) brightness(94%) contrast(103%) !important;
+            -webkit-filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(1826%) hue-rotate(54deg) brightness(94%) contrast(103%) !important;
+        }
+        .animated-btn.btn-armygreen:hover,
+        button.animated-btn.btn-armygreen:hover,
+        a.animated-btn.btn-armygreen:hover {
+            background-color: var(--btn-armygreen-hover) !important;
+            background: var(--btn-armygreen-hover) !important;
+        }
 
-.animated-btn.icon-phone:hover::after,
-        button.animated-btn.icon-phone:hover::after,
-        a.animated-btn.icon-phone:hover::after {
-    left: calc(100% - 37px) !important;
-}
-
-        /* WhatsApp Icon - GREEN */
-.animated-btn.icon-whatsapp::after,
-        button.animated-btn.icon-whatsapp::after,
-        a.animated-btn.icon-whatsapp::after {
-    content: '' !important;
-    position: absolute !important;
-    width: 18px !important;
-    height: 18px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2325d366' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z'%3E%3C/path%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    left: 19px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 2 !important;
-    display: block !important;
-}
-
-.animated-btn.icon-whatsapp:hover::after,
-        button.animated-btn.icon-whatsapp:hover::after,
-        a.animated-btn.icon-whatsapp:hover::after {
-    left: calc(100% - 37px) !important;
-}
-
-        /* Star/Menu Icon - PURPLE */
-.animated-btn.icon-menu::after,
-        button.animated-btn.icon-menu::after,
-        a.animated-btn.icon-menu::after {
-    content: '' !important;
-    position: absolute !important;
-    width: 18px !important;
-    height: 18px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'%3E%3C/path%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    left: 19px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 2 !important;
-    display: block !important;
-}
-
-.animated-btn.icon-menu:hover::after,
-        button.animated-btn.icon-menu:hover::after,
-        a.animated-btn.icon-menu:hover::after {
-    left: calc(100% - 37px) !important;
-}
-
-        /* Location/Map Icon - DARK */
-.animated-btn.icon-location::after,
-        button.animated-btn.icon-location::after,
-        a.animated-btn.icon-location::after {
-    content: '' !important;
-    position: absolute !important;
-    width: 18px !important;
-    height: 18px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f2937' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    left: 19px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 2 !important;
-    display: block !important;
-}
-
-.animated-btn.icon-location:hover::after,
-        button.animated-btn.icon-location:hover::after,
-        a.animated-btn.icon-location:hover::after {
-    left: calc(100% - 37px) !important;
-}
-
-        /* Crown/VIP Icon - GOLD */
-.animated-btn.icon-crown::after,
-        button.animated-btn.icon-crown::after,
-        a.animated-btn.icon-crown::after {
-    content: '' !important;
-    position: absolute !important;
-    width: 18px !important;
-    height: 18px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm0 16h20'%3E%3C/path%3E%3C/svg%3E") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    left: 19px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 2 !important;
-    display: block !important;
-}
-
-.animated-btn.icon-crown:hover::after,
-        button.animated-btn.icon-crown:hover::after,
-        a.animated-btn.icon-crown:hover::after {
-    left: calc(100% - 37px) !important;
-}
+        /* Fallback for browsers that don't support CSS variables */
+        @supports not (color: var(--btn-order)) {
+            .animated-btn.btn-order { background: #ff4d4d !important; }
+            .animated-btn.btn-order:hover { background: #e63946 !important; }
+            .animated-btn.btn-call { background: #007bff !important; }
+            .animated-btn.btn-call:hover { background: #0056b3 !important; }
+            .animated-btn.btn-whatsapp { background: #25d366 !important; }
+            .animated-btn.btn-whatsapp:hover { background: #1da851 !important; }
+            .animated-btn.btn-premium { background: #8b5cf6 !important; }
+            .animated-btn.btn-premium:hover { background: #7c3aed !important; }
+            .animated-btn.btn-dark { background: #1f2937 !important; }
+            .animated-btn.btn-dark:hover { background: #111827 !important; }
+            .animated-btn.btn-gold { background: #f59e0b !important; }
+            .animated-btn.btn-gold:hover { background: #d97706 !important; }
+        }

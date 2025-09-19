@@ -1,0 +1,25 @@
+.c-rounded-box {
+  /* Standard border-radius with !important to override GHL defaults */
+    border-radius: 20px !important;
+  /* WebKit browsers (Safari, Chrome, older versions) */
+    -webkit-border-radius: 20px !important;
+  /* Mozilla browsers (Firefox, older versions) */
+    -moz-border-radius: 20px !important;
+  /* Opera (older versions) */
+    -o-border-radius: 20px !important;
+  /* Internet Explorer 9+ */
+    -ms-border-radius: 20px !important;
+  /* Ensure content doesn't overflow rounded corners */
+  overflow: hidden !important;
+  
+  /* Additional properties for better cross-browser support */
+  -webkit-background-clip: padding-box !important;
+  -moz-background-clip: padding !important;
+  background-clip: padding-box !important;
+  
+  /* Reset any conflicting GHL border properties */
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
