@@ -50,13 +50,13 @@
 
     /* ICON VARIABLES */
     --icon-table: url("svg/table2.svg");
-    --icon-bag: url("svg/bag.svg");
-    --icon-cart: url("svg/cart.svg");
-    --icon-phone: url("svg/phone.svg");
-    --icon-message: url("svg/message.svg");
-    --icon-menu: url("svg/menu.svg");
-    --icon-location: url("svg/location.svg");
-    --icon-star: url("svg/star.svg");
+    --icon-bag: url("svg/table2.svg");
+    --icon-cart: url("svg/table2.svg");
+    --icon-phone: url("svg/table2.svg");
+    --icon-message: url("svg/table2.svg");
+    --icon-menu: url("svg/table2.svg");
+    --icon-location: url("svg/table2.svg");
+    --icon-star: url("svg/table2.svg");
     --icon-crown: url("svg/crown-2-svgrepo-com.svg");
     --icon-calendar: url("svg/calender.svg");
 }
