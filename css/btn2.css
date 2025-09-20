@@ -59,6 +59,8 @@
     --icon-star: url("svg/table2.svg");
     --icon-briskbear: url("svg/briskbear.svg");
     --icon-calendar: url("svg/calender.svg");
+    --icon-quote: url("svg/form-svgrepo-com.svg");
+
 }
 
 /* Cross-browser compatibility reset */
@@ -201,6 +203,13 @@ a.animated-btn:active {
 /* =========================
    ICON CLASSES 
 ========================= */
+
+/* Quote/Form Icon */
+.animated-btn.icon-quote::after,
+button.animated-btn.icon-quote::after,
+a.animated-btn.icon-quote::after {
+    background-image: var(--icon-quote) !important;
+}
 
 /* Table/Restaurant Icon */
 .animated-btn.icon-table::after,
