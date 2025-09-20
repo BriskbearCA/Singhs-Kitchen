@@ -57,7 +57,7 @@
     --icon-menu: url("svg/table2.svg");
     --icon-location: url("svg/table2.svg");
     --icon-star: url("svg/table2.svg");
-    --icon-crown: url("svg/crown-2-svgrepo-com.svg");
+    --icon-briskbear: url("svg/briskbear.svg");
     --icon-calendar: url("svg/calender.svg");
 }
 
@@ -258,11 +258,11 @@ a.animated-btn.icon-star::after {
     background-image: var(--icon-star) !important;
 }
 
-/* Crown/VIP Icon */
-.animated-btn.icon-crown::after,
-button.animated-btn.icon-crown::after,
-a.animated-btn.icon-crown::after {
-    background-image: var(--icon-crown) !important;
+/* briskbear/VIP Icon */
+.animated-btn.icon-briskbear::after,
+button.animated-btn.icon-briskbear::after,
+a.animated-btn.icon-briskbear::after {
+    background-image: var(--icon-briskbear) !important;
 }
 
 /* Calendar/Book Icon */
