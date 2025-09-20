@@ -504,6 +504,25 @@ a.animated-btn.btn-armygreen:hover {
     background: var(--btn-armygreen-hover) !important;
 }
 
+/* Add this CSS rule to make icon color match button background color */
+.animated-btn[class*="icon-"]::after,
+button.animated-btn[class*="icon-"]::after,
+a.animated-btn[class*="icon-"]::after {
+    filter: brightness(0) saturate(100%) invert(1) !important;
+    -webkit-filter: brightness(0) saturate(100%) invert(1) !important;
+}
+
+/* For yellow and lime buttons, make icons dark since background is light */
+.animated-btn.btn-yellow[class*="icon-"]::after,
+button.animated-btn.btn-yellow[class*="icon-"]::after,
+a.animated-btn.btn-yellow[class*="icon-"]::after,
+.animated-btn.btn-lime[class*="icon-"]::after,
+button.animated-btn.btn-lime[class*="icon-"]::after,
+a.animated-btn.btn-lime[class*="icon-"]::after {
+    filter: brightness(0) saturate(100%) invert(0) !important;
+    -webkit-filter: brightness(0) saturate(100%) invert(0) !important;
+}
+
 /* Fallback for browsers that don't support CSS variables */
 @supports not (color: var(--btn-red)) {
     .animated-btn.btn-red { background: #E3472B !important; }
